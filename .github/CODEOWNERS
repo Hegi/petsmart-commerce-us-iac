@@ -1,0 +1,5 @@
+@petsmart
+
+./qas @petsmart-team-leads @qas
+./stg @petsmart-team-leads @qas
+./prd @petsmart-team-leads
