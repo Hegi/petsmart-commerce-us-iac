@@ -1,5 +1,13 @@
-@petsmart
+# The below configuratio is only an example
+# Outside special folders, people who have access to this repo
+# should can make changes as they want
+*       @hegi @not-hegi @petsmart-ecommerce-project-leads @petsmart-ecommerce-team-leads @petsmart-ecommerce-project-members
 
-./qas @petsmart-team-leads @qas
-./stg @petsmart-team-leads @qas
-./prd @petsmart-team-leads
+# Only QA and higher ranking can promote changes
+/qas/   @not-hegi @petsmart-ecommerce-project-leads @petsmart-ecommerce-team-leads @petsmart-qas
+
+# Only team leads can promote to staging
+/stg/   @petsmart-ecommerce-project-leads @petsmart-ecommerce-team-leads
+
+# Only program (project) leads can promote changes to production
+/prd/   @petsmart-ecommerce-project-leads
