@@ -24,13 +24,7 @@ resource "commercetools_product_type" "pet-product-tf" {
     type {
       name = "ltext"
     }
-    localized_value {
-          key = "NL"
-          label = {
-            en = "Netherlands"
-            nl = "Nederland"
-          }
-        }
+
     constraint = "SameForAll"
   }
 
