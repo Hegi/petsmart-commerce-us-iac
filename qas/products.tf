@@ -1,5 +1,5 @@
-resource "commercetools_product_type" "pet-product-tf" {
-  key         = "pet-product-tf"
+resource "commercetools_product_type" "pet-product" {
+  key         = "pet-product"
   name        = "Pet Product via IaC"
   description = "This sample product is created and maintained via Terraform."
 
@@ -48,5 +48,29 @@ resource "commercetools_product_type" "pet-product-tf" {
       name = "ltext"
     }
     constraint = "Unique"
+  }
+
+  attribute {
+    name = "intendedPets"
+    label = {
+      en = "Intended Pet(s)"
+    }
+    required = false
+    type {
+      name = "enum"
+      value {
+        key   = "cats"
+        label = "Cats"
+      }
+      value {
+        key   = "dogs"
+        label = "Dogs"
+      }
+      value {
+        key   = "fish"
+        label = "Fish"
+      }
+    }
+    constraint = "SameForAll"
   }
 }
