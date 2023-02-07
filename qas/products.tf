@@ -33,6 +33,7 @@ resource "commercetools_product_type" "pet-product" {
     label = {
       en = "Description"
     }
+    required = true
     type {
       name = "ltext"
     }
