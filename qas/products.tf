@@ -33,7 +33,7 @@ resource "commercetools_product_type" "pet-product" {
     label = {
       en = "Description"
     }
-    required = true
+    required = false
     type {
       name = "ltext"
     }
@@ -48,6 +48,18 @@ resource "commercetools_product_type" "pet-product" {
     type {
       name = "ltext"
     }
+    constraint = "Unique"
+  }
+
+  attribute {
+    name = "baseId"
+    label = {
+      en = "BaseID"
+    }
+    type {
+      name = "text"
+    }
+    required = false
     constraint = "Unique"
   }
 
